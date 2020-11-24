@@ -1,0 +1,50 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 18px;
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/M57_The_Ring_Nebula.JPG/250px-M57_The_Ring_Nebula.JPG");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.nav_box{
+    display: flex;
+    height: 15%;
+    width: 100%;
+    justify-content: center;
+    flex-flow: row wrap;
+}
+
+ nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+nav ul li{
+	margin: 0 10px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+
+.container{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    color: white ;
+
+}
+.gallery{
+    display: table;
+    
+}
+/*this is a comment*/
