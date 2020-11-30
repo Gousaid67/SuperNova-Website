@@ -5,9 +5,10 @@
         <link rel="stylesheet" href="css/style.css">
         <meta charset ="utf-8">
         
+        
     </head>
     <body>
-        <nav>
+        <nav id="navb">
             <div class= "logo"></div>
 
             <div class= nav_box>
@@ -16,23 +17,80 @@
                     <li><a href="#">About</a></li>
                     <li><a href="#">Support</a></li>
                     <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
+                    <li><a href="javascript:void(0);" class="burger" onclick="ExpandNav()"></a></li>
                 </ul>
             </div>
 
         </nav>
         <main class="main-ctn">
             <div class="container">
-                <p>
-                    Supernovae are the byproduct of a piece of candy being so massive that it collapses on itself, exploding with its pieces that are so good and tasty.
-                </p>
-
+                <div class="container">
+                    <h2>What Is A Supernova?</h2>
+                    <div class="description">
+                        <p>
+                        A supernova is the result of a star being so massive that it collapses in on itself, violently exploding.
+                        The result is a large cloud of gas surrounding the remain of the star, called a nebula.
+                        </p>
+                    </div>
+                    <div class="container">
+                        <h2>How Does it Happen?</h2>
+                        <div class="description">
+                            <p>
+                            Most supernovae comes from dying supergiants with a mass that is approxmatly 8 to 15 times that of our sun. This 
+                            </p>
+                        </div>
+                 </div>
+<!---- are u comming tomorrow? probably. Im thinking of making the navbar stick to the top of the screen no matter what, so it follows the user.-->
                 <img src="" alt="">
             </div>
-            <div class="gallery">
+            <div class="container">
+                <h2>gAy-LERI</h2> wtf happened? like i did an oopsie, hold on 
                 
+                <div class="gallery">
+                    <!--add the gallery-item class to any images you add here.-->
+                    <div>
+                        <img class="gallery-item" src="https://upload.wikimedia.org/wikipedia/commons/1/14/Tycho-supernova-xray.jpg">
+                        <p>this is a ...</p>
+                    </div>
+                    <div>
+                        <img class="gallery-item" src="https://upload.wikimedia.org/wikipedia/commons/1/14/Tycho-supernova-xray.jpg">
+                        <p>ohh piece of candy</p>
+                    </div>   
+                    <div>
+                        <img class="gallery-item" src="https://upload.wikimedia.org/wikipedia/commons/1/14/Tycho-supernova-xray.jpg">
+                        <p>so good and tasty REEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE</p>
+                    </div>
+                    <div>
+                        <img class="gallery-item" src="https://upload.wikimedia.org/wikipedia/commons/1/14/Tycho-supernova-xray.jpg">
+                        <p></p>
+                    </div>
+                    <div>
+                        <img class="gallery-item" src="https://upload.wikimedia.org/wikipedia/commons/1/14/Tycho-supernova-xray.jpg">
+                        <p></p>
+                    </div>
+                    <div>
+                        <img class="gallery-item" src="https://upload.wikimedia.org/wikipedia/commons/1/14/Tycho-supernova-xray.jpg">
+                        <p></p>
+                    </div>
+                            
+                </div>
+              
             </div>
             
         </main>
+        <!--need to make a different script or modify the nav class and stick class to make it mobile-friendly.-->
+        <script>
+            var nav = document.getElementById("navb");
+            var stick = nav.offsetTop;
+
+            window.onscroll = function() {
+                if(window.pageYOffset >= stick){
+                    nav.classList.add("stick");
+                }
+                else{
+                    nav.classList.remove("stick");
+                }
+                };
+        </script>
     </body>
 </html>

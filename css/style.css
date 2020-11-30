@@ -5,19 +5,22 @@
 }
 
 body{
+    height: 100vh;
     font-family: "Comic Sans MS", cursive, sans-serif;
     font-size: 18px;
-    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/M57_The_Ring_Nebula.JPG/250px-M57_The_Ring_Nebula.JPG");
+    background-image: url("https://www.nasa.gov/sites/default/files/thumbnails/image/ring-nebula-full_jpg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .nav_box{
     display: flex;
-    height: 15%;
+    height: 50px;
     width: 100%;
     justify-content: center;
+    align-items: center;
     flex-flow: row wrap;
+    background-color: grey;
 }
 
  nav ul {
@@ -26,25 +29,70 @@ body{
     flex-wrap: wrap;
 }
 
-nav ul li{
-	margin: 0 10px;
-}
+
 
 nav ul li a{
+    display: inline-block;
+    padding: 5px 10px;
     text-decoration: none;
     color: white;
+    border-radius: 5px;
+}
+
+nav ul li a:hover{
+    border-radius: 5px;
+    background-color: darkgrey;
+}
+nav ul li a:active{
+    color: blue;
 }
 
 
 .container{
     display: flex;
     justify-content: center;
-    flex-direction: row;
+    flex-direction: column;
     color: white ;
 
 }
+
+
+.stick{
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+.stick + .main-ctn {
+    padding-top: 60px;
+}
+.container h2{
+    text-align: center;
+}
+
+.description{
+    display: flex;
+    flex-flow: row ;
+    justify-content: center;
+}
 .gallery{
-    display: table;
+    display: inline-flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    
+/*how are we handling overflow? yes. Interesting results lol*/
     
 }
+.gallery-item{
+    width: 250px;
+    height: auto; /*to preserve aspect ratio*/
+    padding: 20px 20px 0 20px;
+}
 /*this is a comment*/
+
+.nav_box .burger{
+    display: none;
+}
+
+@media screen and (max-width: 400px){
+
+}
