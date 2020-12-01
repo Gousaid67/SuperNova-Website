@@ -8,11 +8,22 @@ body{
     height: 100vh;
     font-family: "Comic Sans MS", cursive, sans-serif;
     font-size: 18px;
+    display: flex;
+    flex-direction: column;
     background-image: url("https://www.nasa.gov/sites/default/files/thumbnails/image/ring-nebula-full_jpg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-}
+    background-attachment: fixed;
+    background-position: center;
 
+    
+}
+.main-ctn{
+    background-color: rgba(128,128,128, 0.5) ;
+    
+    width: 60%;
+    align-self: center;
+}
 .nav_box{
     display: flex;
     height: 50px;
@@ -20,7 +31,7 @@ body{
     justify-content: center;
     align-items: center;
     flex-flow: row wrap;
-    background-color: grey;
+    background-color: #f4d58d;
 }
 
  nav ul {
@@ -52,7 +63,7 @@ nav ul li a:active{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    color: white ;
+    color: white;
 
 }
 
@@ -75,24 +86,60 @@ nav ul li a:active{
     justify-content: center;
 }
 .gallery{
-    display: inline-flex;
+    display: flex;
     flex-flow: row wrap;
     justify-content: center;
     
-/*how are we handling overflow? yes. Interesting results lol*/
+/*how are we handling overflow? yes. Interesting results lol*/  
+}
+
+.gallery-item{
+    width: 165px;
+    height: auto; /*to preserve aspect ratio*/
+    border-radius: 10px;
+    border-width: 0;
+    border: solid black 4px;
+    margin: 20px;
+    background-color: firebrick;
     
 }
-.gallery-item{
-    width: 250px;
-    height: auto; /*to preserve aspect ratio*/
-    padding: 20px 20px 0 20px;
+.gallery-item img{
+    width: 100%;
+    align-items: center;
+    
 }
+.gallery-item p{
+    text-align: center;
+    overflow-wrap: break-word;
+    
+}
+
 /*this is a comment*/
 
 .nav_box .burger{
     display: none;
 }
 
+#links{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
 @media screen and (max-width: 400px){
+    
+#links{
+    display: none;
+
+}
+
+.burger{
+    display: block;
+    
+}
+body{
+    background-image: url("https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/nicolas-cage-1580830257.jpg");
+}
+    
 
 }
